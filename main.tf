@@ -60,7 +60,7 @@ output "from_module2_workspace_name"{
 }
   
 output "tform"{
-  value = decodejson(terraform)
+  value = decodejson(terraform.name)
 }
 
 

@@ -49,11 +49,10 @@ output "ATLAS_CONFIGURATION_SLUG"{
 
 module "test" {
   source = "./modules/test/"
-  ATLAS_CONFIGURATION_SLUG = ""
 }
 
 output "from_module"{
-  value = module.test.ATLAS_CONFIGURATION_SLUG
+  value = module.test.hello_from_module
 }
 
 

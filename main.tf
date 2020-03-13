@@ -1,5 +1,6 @@
 locals{
   test = "hello world"
+  version "1.1"
 }
 
 variable "ATLAS_WORKSPACE_NAME"{
@@ -10,6 +11,10 @@ resource "null_resource" "exampleB" {
       key   = "hello"
       value = formatdate("YYYY-MM-DD hh:mm:ssZZZZZ", timestamp())
   }
+}
+
+output "version"{
+  value = local.version
 }
 
 output "test"{

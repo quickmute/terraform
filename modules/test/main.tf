@@ -5,7 +5,6 @@ variable "ATLAS_CONFIGURATION_SLUG"{
 }
 
 variable "ATLAS_WORKSPACE_NAME"{
-  type = string
 }
 
 output "hello_from_module"{

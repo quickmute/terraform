@@ -1,6 +1,7 @@
 ## hello
 variable "ATLAS_CONFIGURATION_SLUG"{
+  default = ""
 }
-output "ATLAS_CONFIGURATION_SLUG"{
+output "hello_from_module"{
   value = var.ATLAS_CONFIGURATION_SLUG
 }

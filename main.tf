@@ -50,14 +50,6 @@ output "ATLAS_CONFIGURATION_SLUG"{
 module "test" {
   source = "./modules/test/"
 }
-
-output "from_module"{
-  value = module.test.hello_from_module
-}
-  
-output "from_module2_workspace_name"{
-  value = module.test.workspace
-}
   
 output "tform"{
   value = terraform.workspace

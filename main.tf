@@ -47,8 +47,8 @@ output "ATLAS_CONFIGURATION_SLUG"{
   value = var.ATLAS_CONFIGURATION_SLUG
 }
 
-output "TF_VAR_ATLAS_CONFIGURATION_SLUG"{
-  value = var.TF_VAR_ATLAS_CONFIGURATION_SLUG
+module "test" {
+  source = "./modules/test/"
 }
 
 

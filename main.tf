@@ -17,7 +17,7 @@ resource "null_resource" "trigger" {
 
 resource "null_resource" "envs" {
   provisioner "local-exec" {
-      command = "printenv"
+      command = "printenv | 'grep TF_VAR_'"
   }
 }
 
@@ -32,5 +32,4 @@ output "workspace"{
 
 output "RUN_ID"{
   value = var.TFE_RUN_ID 
-}
 }

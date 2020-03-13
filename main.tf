@@ -1,8 +1,6 @@
 variable "ATLAS_WORKSPACE_NAME"{
 }
 
-variable "TFE_RUN_ID"{
-}
 
 locals{
   version = "1.1"
@@ -17,7 +15,7 @@ resource "null_resource" "trigger" {
 
 resource "null_resource" "envs" {
   provisioner "local-exec" {
-      command = "printenv | 'grep TF_VAR_'"
+      command = "printenv"
   }
 }
 
@@ -30,6 +28,16 @@ output "workspace"{
   value = var.ATLAS_WORKSPACE_NAME  
 }
 
-output "RUN_ID"{
+
+variable "TFE_RUN_ID"{
+}
+output "TFE_RUN_ID"{
   value = var.TFE_RUN_ID 
 }
+
+variable "SSH_CLIENT"{
+}
+output "SSH_CLIENT"{
+  value = var.SSH_CLIENT
+}
+

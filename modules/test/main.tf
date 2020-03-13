@@ -8,10 +8,6 @@ variable "ATLAS_WORKSPACE_NAME"{
   default = ""
 }
 
-output "hello_from_module"{
-  value = terraform
-}
-
 output "workspace"{
   value = var.ATLAS_WORKSPACE_NAME
 }

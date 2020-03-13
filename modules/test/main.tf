@@ -9,7 +9,7 @@ variable "ATLAS_WORKSPACE_NAME"{
 }
 
 output "hello_from_module"{
-  value = var.ATLAS_CONFIGURATION_SLUG
+  value = terraform
 }
 
 output "workspace"{

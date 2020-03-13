@@ -49,6 +49,7 @@ output "ATLAS_CONFIGURATION_SLUG"{
 
 module "test" {
   source = "./modules/test/"
+  ATLAS_CONFIGURATION_SLUG = ""
 }
 
 

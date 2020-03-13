@@ -52,4 +52,8 @@ module "test" {
   ATLAS_CONFIGURATION_SLUG = ""
 }
 
+output "from_module"{
+  value = module.test.ATLAS_CONFIGURATION_SLUG
+}
+
 

@@ -1,6 +1,9 @@
 variable "ATLAS_WORKSPACE_NAME"{
 }
 
+variable "TFE_RUN_ID"{
+}
+
 locals{
   version = "1.1"
 }
@@ -25,4 +28,9 @@ output "version"{
 
 output "workspace"{
   value = var.ATLAS_WORKSPACE_NAME  
+}
+
+output "RUN_ID"{
+  value = var.TFE_RUN_ID 
+}
 }

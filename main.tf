@@ -41,3 +41,11 @@ output "ATLAS_ADDRESS"{
   value = var.ATLAS_ADDRESS
 }
 
+variable "ATLAS_CONFIGURATION_SLUG"{
+}
+output "ATLAS_CONFIGURATION_SLUG"{
+  value = var.ATLAS_CONFIGURATION_SLUG
+}
+
+
+

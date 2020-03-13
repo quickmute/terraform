@@ -8,7 +8,7 @@ variable "ATLAS_WORKSPACE_NAME"{
 resource "null_resource" "exampleB" {
   triggers = {
       key   = "hello"
-      value = "world"
+      value = formatdate("YYYY-MM-DD hh:mm:ssZZZZZ", timestamp())
   }
 }
 

@@ -52,7 +52,7 @@ module "test" {
 }
   
 output "tform"{
-  value = terraform.workspace
+  value = terraform.env
 }
   
 output "meself"{

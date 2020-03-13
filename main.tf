@@ -54,6 +54,10 @@ module "test" {
 output "tform"{
   value = terraform.workspace
 }
+  
+output "meself"{
+  value = self.name
+}
 
 
 

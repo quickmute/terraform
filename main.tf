@@ -55,9 +55,6 @@ output "tform"{
   value = terraform.env
 }
   
-output "meself"{
-  value = self.name
-}
 
 
 

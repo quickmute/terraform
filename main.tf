@@ -5,15 +5,17 @@ locals{
   version = "1.1"
 }
 
-resource "null_resource" "example" {
+resource "null_resource" "trigger" {
   triggers = {
       key   = "hello"
       value = formatdate("YYYY-MM-DD hh:mm:ssZZZZZ", timestamp())
   }
 }
 
-provisioner "local-exec" {
-    command = "printenv"
+resource "null_resource" "envs" {
+  provisioner "local-exec" {
+      command = "printenv"
+  }
 }
 
 

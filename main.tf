@@ -35,9 +35,9 @@ output "TFE_RUN_ID"{
   value = var.TFE_RUN_ID 
 }
 
-variable "SSH_CLIENT"{
+variable "ATLAS_ADDRESS"{
 }
-output "SSH_CLIENT"{
-  value = var.SSH_CLIENT
+output "ATLAS_ADDRESS"{
+  value = var.ATLAS_ADDRESS
 }
 

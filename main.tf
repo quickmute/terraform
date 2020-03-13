@@ -54,5 +54,10 @@ module "test" {
 output "from_module"{
   value = module.test.hello_from_module
 }
+  
+output "from_module2_workspace_name"{
+  value = module.test.workspace
+}
+
 
 

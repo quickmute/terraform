@@ -1,6 +1,6 @@
 locals{
   test = "hello world"
-  version "1.1"
+  version = "1.1"
 }
 
 variable "ATLAS_WORKSPACE_NAME"{

@@ -58,6 +58,10 @@ output "from_module"{
 output "from_module2_workspace_name"{
   value = module.test.workspace
 }
+  
+output "tform"{
+  value = decodejson(terraform)
+}
 
 
 

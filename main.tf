@@ -1,7 +1,3 @@
-variable "ATLAS_WORKSPACE_NAME"{
-}
-
-
 locals{
   version = "1.1"
 }
@@ -34,19 +30,9 @@ resource "null_resource" "envs" {
   }
 }
 
-
 output "version"{
   value = local.version
 }
-
-output "workspace"{
-  value = var.ATLAS_WORKSPACE_NAME  
-}
-
-output "tform"{
-  value = terraform.env
-}
-  
 
 
 

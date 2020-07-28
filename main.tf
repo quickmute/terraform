@@ -6,6 +6,21 @@ locals{
   version = "1.1"
 }
 
+locals {
+    env_map = {
+        "dev" = "p"
+        "qa" = "q"
+        "uat" = "u"
+        "prod" = "p"
+    }
+    env_abv = lookup(local.env_map,var.environment,"Unknown") 
+}
+
+output "env_abv"{
+    value = local.env_abv
+}
+
+
 resource "null_resource" "trigger" {
   triggers = {
       key   = "hello"
@@ -28,29 +43,6 @@ output "workspace"{
   value = var.ATLAS_WORKSPACE_NAME  
 }
 
-
-variable "TFE_RUN_ID"{
-}
-output "TFE_RUN_ID"{
-  value = var.TFE_RUN_ID 
-}
-
-variable "ATLAS_ADDRESS"{
-}
-output "ATLAS_ADDRESS"{
-  value = var.ATLAS_ADDRESS
-}
-
-variable "ATLAS_CONFIGURATION_SLUG"{
-}
-output "ATLAS_CONFIGURATION_SLUG"{
-  value = var.ATLAS_CONFIGURATION_SLUG
-}
-
-module "test" {
-  source = "./modules/test/"
-}
-  
 output "tform"{
   value = terraform.env
 }

@@ -2,6 +2,10 @@ locals{
   version = "1.1"
 }
 
+variable "environment"{
+  default = "dev"
+}
+
 locals {
     env_map = {
         "dev" = "p"

@@ -43,3 +43,6 @@ module "embshd" {
   version = "2.0.0"
 }
 
+output "embshd"{
+  value = module.embshd.timestamp
+  }

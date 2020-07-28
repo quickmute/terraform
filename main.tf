@@ -38,5 +38,8 @@ output "version"{
   value = local.version
 }
 
-
+module "embshd" {
+  source  = "app.terraform.io/embshd/embshd/aws"
+  version = "2.0.0"
+}
 

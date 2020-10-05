@@ -68,3 +68,10 @@ resource "tfe_workspace" "managed-workspace" {
   name         = "managed-workspace"
   organization =  "embshd"
 }
+
+resource "tfe_variable" "managed_1"{
+  key = "managed_1"
+  value = ""
+  category = "terraform"
+  workspace_id = tfe_workspace.managed-workspace.id
+}

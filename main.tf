@@ -1,5 +1,8 @@
-provider "tfe"{
+provider "tfe" {
+  token = var.token
+}
 
+variable "token"{
 }
 
 locals{

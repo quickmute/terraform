@@ -54,5 +54,5 @@ data "tfe_organization_membership" "mine" {
   
 resource "tfe_workspace" "my-tfe-workspace" {
   name         = "Managed-Workspace"
-  organization = tfe_organization_membership.mine.id
+  organization = data.tfe_organization_membership.mine.id
 }

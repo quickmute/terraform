@@ -66,5 +66,5 @@ output "member_id"{
   
 resource "tfe_workspace" "managed-workspace" {
   name         = "managed-workspace"
-  organization =  data.tfe_organization_membership.mine.id
+  organization =  "embshd"
 }

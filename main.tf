@@ -63,3 +63,8 @@ data "tfe_organization_membership" "mine" {
 output "member_id"{
   value = data.tfe_organization_membership.mine.id
 }
+  
+resource "tfe_workspace" "managed-workspace" {
+  name         = "managed-workspace"
+  organization =  data.tfe_organization_membership.mine.id
+}

@@ -47,7 +47,7 @@ output "embshd"{
   value = module.embshd.timestamp
 }
 
-resource "tfe_workspace" "my-tfe-workspace" {
-  name         = "Managed-Workspace"
-  organization = "embshd"
+data "tfe_organization_membership" "test" {
+  organization  = "embsd"
+  email = "hyon24@gmail.com"
 }

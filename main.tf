@@ -55,7 +55,11 @@ output "embshd"{
   value = module.embshd.timestamp
 }
 
-data "tfe_organization_membership" "test" {
+data "tfe_organization_membership" "mine" {
   organization  = "embshd"
   email = "hyon24@gmail.com"
+}
+
+output "member_id"{
+  value = data.tfe_organization_membership.mine.id
 }

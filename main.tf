@@ -48,6 +48,6 @@ output "embshd"{
 }
 
 data "tfe_organization_membership" "test" {
-  organization  = "embshd"
+  organization  = "ws-1iAxTBzpFDaHPSsd"
   email = "hyon24@gmail.com"
 }

@@ -3,6 +3,7 @@ provider "tfe" {
 }
 
 variable "token"{
+  default = ""
 }
 
 locals{

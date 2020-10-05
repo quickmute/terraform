@@ -1,3 +1,7 @@
+provider "tfe"{
+
+}
+
 locals{
   version = "1.1"
 }

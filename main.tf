@@ -2,6 +2,15 @@ provider "tfe" {
   token = var.token
 }
 
+variable "ATLAS_WORKSPACE_NAME" {
+  type        = string
+  description = "the tfe environment variable that contains the workspace name. Should be automatically populated via terraform run."
+}
+
+output "atlas"{
+    value = var.ATLAS_WORKSPACE_NAME
+}
+
 variable "token"{
   default = ""
 }
